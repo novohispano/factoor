@@ -1,0 +1,9 @@
+.navbar.navbar-top
+  .navbar-inner
+    .container
+      = link_to "Factoor", root_path, class: "brand"
+      .nav-collapse.collapse
+        %ul.nav
+          = link_to "Agregar Factura", new_invoice_path
+        %ul.nav
+          = link_to "Facturas", invoices_path

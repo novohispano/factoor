@@ -1,0 +1,49 @@
+@import "bootstrap";
+
+// FORMS
+
+@mixin form_position {
+  position: relative;
+  bottom: 70px;
+}
+
+.btn-form {
+  position: relative;
+  bottom: 25px;
+  right: 224px;
+  min-width: 150px;
+}
+
+.field-date {
+  @include form_position;
+}
+
+#invoice_date_1i {
+  width: 150px;
+  @include form_position;
+}
+
+#invoice_date_2i {
+  width: 202px;
+  @include form_position;
+}
+
+#invoice_date_3i {
+  width: 100px;
+  @include form_position;
+}
+
+.field-description {
+  width: 448px;
+  @include form_position;
+}
+
+.field-receptor {
+  position: relative;
+  left: 242px;
+  @include form_position;
+}
+
+.field-subtotal {
+  @include form_position;
+}

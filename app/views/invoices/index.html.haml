@@ -1,0 +1,11 @@
+.container
+  %h1 Invoices
+  - @invoices.each do |invoice|
+    = invoice.issuer
+    = invoice.recipient
+    = invoice.description
+    = invoice.date
+    = invoice.subtotal
+    = invoice.tax
+    = invoice.total
+    %br

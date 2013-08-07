@@ -1,0 +1,16 @@
+.container
+  .span6
+    %h3 Nueva Factura
+    %hr
+    = form_for @invoice do |f|
+      %p Emisor
+      = f.text_field :issuer
+      %p.field-receptor Receptor
+      = f.text_field :recipient, class: "field-receptor"
+      %p.field-description Descripción
+      = f.text_area :description, class: "field-description"
+      %p.field-date Fecha
+      = f.date_select :date
+      %p.field-subtotal Subtotal
+      = f.text_field :subtotal, class: "field-subtotal"
+      = f.submit "AGREGAR", class: "btn btn-success btn-form"
