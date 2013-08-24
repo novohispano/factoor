@@ -3,6 +3,18 @@ class InvoicesController < ApplicationController
     @invoices = Invoice.all
   end
 
+  def income
+    @invoices = Invoice.where(invoice_type: "Ingreso")
+
+    render :index
+  end
+
+  def expense
+    @invoices = Invoice.where(invoice_type: "Egreso")
+
+    render :index
+  end
+
   def show
     @invoice = Invoice.find(params[:id])
   end
@@ -15,7 +27,7 @@ class InvoicesController < ApplicationController
     invoice = Invoice.create(invoice_params)
 
     if invoice.save
-      redirect_to invoices_path, message: "La factura #{invoice.id} se agregó al sistema."
+      redirect_to invoices_path, notice: "La factura #{invoice.id} se agregó al sistema."
     else
       redirect_to invoice_new_path, alert: "La factura #{invoice.id} no pudo agregarse al sistema."
     end
@@ -28,6 +40,7 @@ class InvoicesController < ApplicationController
       :issuer,
       :recipient,
       :description,
+      :invoice_type,
       :date,
       :subtotal
       )

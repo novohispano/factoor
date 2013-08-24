@@ -1,5 +1,10 @@
 Factoor::Application.routes.draw do
-  resources :invoices
+  resources :invoices do
+    collection do
+      get "income"
+      get "expense"
+    end
+  end
 
   root 'home#show'
   # The priority is based upon order of creation: first created -> highest priority.

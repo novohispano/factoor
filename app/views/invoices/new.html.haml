@@ -3,6 +3,8 @@
     %h3 Nueva Factura
     %hr
     = form_for @invoice do |f|
+      %p Tipo
+      = f.select :invoice_type, ["Egreso", "Ingreso"]
       %p Emisor
       = f.text_field :issuer
       %p.field-receptor Receptor

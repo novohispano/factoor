@@ -1,11 +1,23 @@
 .container
-  %h1 Invoices
-  - @invoices.each do |invoice|
-    = invoice.issuer
-    = invoice.recipient
-    = invoice.description
-    = invoice.date
-    = invoice.subtotal
-    = invoice.tax
-    = invoice.total
-    %br
+  %h3 Invoices
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Emisor
+        %th Receptor
+        %th Descripción
+        %th Tipo
+        %th Fecha
+        %th Subtotal
+        %th Impuesto
+        %th Total
+    - @invoices.each do |invoice|
+      %tr
+        %td= invoice.issuer
+        %td= invoice.recipient
+        %td= invoice.description
+        %td= invoice.invoice_type
+        %td= format_time(invoice.date)
+        %td= number_to_currency(invoice.subtotal)
+        %td= number_to_currency(invoice.tax)
+        %td= number_to_currency(invoice.total)

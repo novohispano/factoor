@@ -1,5 +1,16 @@
 @import "bootstrap";
 
+// NAV
+
+ul.nav {
+  position: relative;
+  top: 13px;
+}
+
+.navbar .nav {
+  margin: 0 30px 0 0;
+}
+
 // FORMS
 
 @mixin form_position {
