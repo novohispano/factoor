@@ -1,4 +1,8 @@
 Factoor::Application.routes.draw do
+  get 'auth/:provider/callback', to: 'sessions#create', as: 'login'
+  get 'auth/failure',            to: redirect('/')
+  get 'signout',                 to: 'sessions#destroy', as: 'logout'
+
   resources :invoices do
     collection do
       get "income"

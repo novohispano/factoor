@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'haml'
 gem 'omniauth-facebook'
+gem 'figaro'
 
 group :test do
   gem 'rspec-rails'
