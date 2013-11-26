@@ -3,6 +3,7 @@
     .container.container-navbar
       = link_to "Factoor", root_path, class: "brand"
       .nav-collapse.collapse
+      - if logged_in?
         %ul.nav
           = link_to "AGREGAR FACTURA", new_invoice_path
         %ul.nav
@@ -11,3 +12,8 @@
           = link_to "EGRESOS", expense_invoices_path
         %ul.nav
           = link_to "TOTAL", invoices_path
+        %ul.nav
+          = link_to "SALIR", logout_path
+      - else
+        %ul.nav
+          = link_to "ENTRAR", "/auth/facebook"
