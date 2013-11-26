@@ -1,13 +1,13 @@
 .navbar.navbar-top
   .navbar-inner
-    .container
+    .container.container-navbar
       = link_to "Factoor", root_path, class: "brand"
       .nav-collapse.collapse
         %ul.nav
-          = link_to "Agregar Factura", new_invoice_path
+          = link_to "AGREGAR FACTURA", new_invoice_path
         %ul.nav
-          = link_to "Total", invoices_path
+          = link_to "INGRESOS", income_invoices_path
         %ul.nav
-          = link_to "Ingresos", income_invoices_path
+          = link_to "EGRESOS", expense_invoices_path
         %ul.nav
-          = link_to "Egresos", expense_invoices_path
+          = link_to "TOTAL", invoices_path

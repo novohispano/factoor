@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'haml'
+gem 'omniauth-facebook'
 
 group :test do
   gem 'rspec-rails'

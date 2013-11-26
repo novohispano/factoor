@@ -70,3 +70,52 @@ ul.nav {
 .field-subtotal {
   @include form_position;
 }
+
+// HOME
+
+.center {
+  text-align: center;
+}
+
+.h1-home {
+  letter-spacing: -.09em;
+  font-size: 800%;
+  margin-bottom: 30px;
+}
+
+.background-home {
+  background-color: #424854;
+  // opacity: 0.6;
+  min-height: 650px;
+  color: white;
+  min-width: 100%;
+  position: relative;
+    bottom: 20px;
+  background-image: url(background.jpg);
+}
+
+.navbar-inner {
+  min-height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  background-image: none;
+  border: 0px;
+  border-radius: 0px;
+  box-shadow: 0px;
+  *zoom: 1;
+}
+
+.container-navbar{
+  position: relative;
+  top: 10px;
+}
+
+.copy-home{
+  position: relative;
+  top: 150px;
+}
+
+.btn-home{
+  margin-top: 20px;
+}
