@@ -1,4 +1,8 @@
+require 'resque/server'
+
 Factoor::Application.routes.draw do
+  mount Resque::Server.new, at: "/resque"
+
   get 'auth/:provider/callback', to: 'sessions#create', as: 'login'
   get 'auth/failure',            to: redirect('/')
   get 'signout',                 to: 'sessions#destroy', as: 'logout'

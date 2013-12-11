@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'haml'
 gem 'omniauth-facebook'
 gem 'figaro'
+gem 'resque'
 
 group :test do
   gem 'rspec-rails'
